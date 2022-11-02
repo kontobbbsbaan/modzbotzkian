@@ -3563,7 +3563,7 @@ let capt = `⭔ Title: ${judul}
             case 'h': {
                 if (!isCreator) return
             if (!m.isGroup) throw mess.group
-            akame.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}
+            naze.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}
             }
             break
             case 'menu': {
