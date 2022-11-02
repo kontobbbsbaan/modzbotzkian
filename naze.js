@@ -52,7 +52,7 @@ const nyoutube = ('© Naze\nYoutube/Sc :\nhttps://youtube.com/c/Nazedev')  //uba
 const ini_mark = `0@s.whatsapp.net`
 const ownernya = ownernomer + '@s.whatsapp.net'
 global.prem = require("./lib/premium")
-gambar = fs.readFileSync('./media/image/naze.jpg')
+gambar = fs.readFileSync('./media/image/kon.jpg')
 
 //TIME
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
@@ -169,7 +169,7 @@ module.exports = naze = async (naze, m, chatUpdate, store) => {
                 if (!('antilink' in chats)) chats.antilink = false
             } else global.db.data.chats[m.chat] = {
                 mute: false,
-                antilink: false,
+                antilink: true,
             }
 		
 	    let setting = global.db.data.settings[botNumber]
@@ -3558,6 +3558,12 @@ let capt = `⭔ Title: ${judul}
             capt += `⭔ Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, res.result[0].thumbnail, capt, m)
+            }
+            break
+            case 'h': {
+                if (!isCreator) return
+            if (!m.isGroup) throw mess.group
+            akame.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}
             }
             break
             case 'menu': {
