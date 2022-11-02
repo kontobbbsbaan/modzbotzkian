@@ -19,13 +19,13 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6285875158363']
-global.ownernomer = "6285875158363"
-global.premium = ['6285875158363']
-global.packname = 'Sticker By'
-global.author = 'Naze Dev'
+global.owner = ['6283845409710']
+global.ownernomer = "6283845409710"
+global.premium = ['6283845409710']
+global.packname = ''
+global.author = ''
 global.sessionName = 'nazedev'  //jangan diganti bro nanti error
-global.jumlha = '999'
+global.jumlha = '1000'
 global.jumhal = '100000000000000'
 global.jumlah = '1000000000'
 global.prefa = ['','!','.','#','&']
@@ -55,19 +55,19 @@ global.limitawal = {
 }
 
 // Fake
-global.thumb = fs.readFileSync('./media/image/naze.jpg')
-global.faall = fs.readFileSync('./media/image/fake.jpg')
+global.thumb = fs.readFileSync('./media/image/kon.jpg')
+global.faall = fs.readFileSync('./media/image/kon.jpg')
 
 // Url
-global.mygit = 'https://github.com/nazedev'
-global.myyt = 'https://youtube.com/c/Nazedev'
-global.myytv = 'https://youtu.be/FAsL-Jy4qLc'
-global.mygc = "https://chat.whatsapp.com/Cp1OJenk6Q9D9vgLjLU558"
+global.mygit = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
+global.myyt = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
+global.myytv = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
+global.mygc = "https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q"
 
 // Engak Ngaruh, Belum Kepasang
-global.botname = 'NAZE BOT'
-global.akulaku = 'Bot By Naze'
-global.ytname = 'YT NAZE' //Kalo Ngk Punya Yt Ngak Usah Di Ganti
+global.botname = 'MODZ BOTZ'
+global.akulaku = 'Bot By KIAN'
+global.ytname = 'MODZ BOTZ' //Kalo Ngk Punya Yt Ngak Usah Di Ganti
 
 
 let file = require.resolve(__filename)
