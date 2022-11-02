@@ -59,10 +59,10 @@ global.thumb = fs.readFileSync('./media/image/kon.jpg')
 global.faall = fs.readFileSync('./media/image/kon.jpg')
 
 // Url
-global.mygit = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
+global.mygit = '-'
 global.myyt = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
-global.myytv = 'https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q'
-global.mygc = "https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q"
+global.myytv = 'https://youtu.be/gua-LcwX20s'
+global.mygc = "-"
 
 // Engak Ngaruh, Belum Kepasang
 global.botname = 'MODZ BOTZ'
