@@ -167,13 +167,13 @@ async function startNaze() {
                 let teks2 = `*Selamat Tinggal Kak @${num.split('@')[0]}*\n*Semoga Tenang Di Alam Sana*\n_~Admin_`
                 let teks3 = `*@${num.split('@')[0]} Promote From*\n*${metadata.subject}*\n*Selamat Anda Menjadi Admin*\n_~Jangan Semena Mena!_`
                 let teks4 = `*@${num.split('@')[0]} Demote From*\n*${metadata.subject}*\n_Kasihan Turun Pangkat🤭_`
-                if (anu.action == 'add') {
+                if (anu.action == 'add?') {
                     naze.sendMessage(anu.id, { caption: teks1, location: { jpegThumbnail: await reSize(ppuser, 100, 100)}, buttons: butwel, footer: nyoutube, mentions: [num] })
-                } else if (anu.action == 'remove') {
+                } else if (anu.action == 'remove?') {
                     naze.sendMessage(anu.id, { caption: teks2, location: { jpegThumbnail: await reSize(ppuser, 100, 100)}, buttons: butleav, footer: nyoutube, mentions: [num] })
-                } else if (anu.action == 'promote') {
+                } else if (anu.action == 'promote?') {
                     naze.sendMessage(anu.id, { caption: teks3, location: { jpegThumbnail: await reSize(ppuser, 100, 100)}, buttons: butselamat, footer: nyoutube, mentions: [num] })
-                } else if (anu.action == 'demote') {
+                } else if (anu.action == 'demote?') {
                     naze.sendMessage(anu.id, { caption: teks4, location: { jpegThumbnail: await reSize(ppuser, 100, 100)}, buttons: butsebar, footer: nyoutube, mentions: [num] })
               }
             }
