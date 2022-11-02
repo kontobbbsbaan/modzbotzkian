@@ -3983,7 +3983,7 @@ let alfamart = `628111500959@s.whatsapp.net`
   sourceUrl: myyt
   }}
   }
-  naze.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  naze.sendMessage(m.chat, buttonMessage, {quoted: fakestatus})
   }
  break
             case 'simplemenu': case 'list': case 'help': {
