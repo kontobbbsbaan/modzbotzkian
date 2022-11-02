@@ -1011,23 +1011,22 @@ break
             }
             break
             case 'sc': {
-                m.reply('https://wa.me/6283845409710')
+                m.reply('Mau apa cuy')
             }
             break		 
-            case 'subsyt': {
-            let jawab = `*${ucapanWaktu}*\n*Silahkan Klik Link Ini*`
-            let Message = {
+            case 'p': case '🗿': {
+            let jawab = `bantu subscribe https://youtube.com/channel/UC5mUj5o2S4zwwGNbPA2J31Q`
+            let buttons = [{ buttonId: 'menu', buttonText: { displayText: 'Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: 'Owner Bot' }, type: 1 }]
+            let buttonMessage = {
   document: fs.readFileSync('./media/doc/fake.pptx'),
-  fileName : akulaku + (` | Halo ${pushname}`),
+  fileName : `Halo Kak ${pushname}`,
   mimetype: `${filsk}`,
   fileLength: jumhal,
   pageCount: jumlha,
   caption: jawab,
-  footer: nyoutube,
   buttons: buttons,
   headerType: 4,
   contextInfo:{externalAdReply:{
-  title: 'Naze Dev',
   body: 'Subscribe My YouTube', 
   showAdAttribution: true,
   thumbnail: thumb,
@@ -1036,7 +1035,7 @@ break
   sourceUrl: myyt
   }}
   }
-  naze.sendMessage(m.chat, Message, {quoted: fkontak})
+  naze.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
             	}
             break
             case 'ceklimit': case 'checklimit': case 'limit':{
@@ -1996,51 +1995,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 naze.sendContact(m.chat, global.owner, m)
             }
             break
-            /**case 'setmenu': {
-            if (!isCreator) throw mess.owner
-            let setbot = db.data.settings[botNumber]
-               if (args[0] === 'templateImage'){
-                setbot.templateImage = true
-                setbot.templateVideo = false
-                setbot.templateGif = false
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateVideo'){
-                setbot.templateImage = false
-                setbot.templateVideo = true
-                setbot.templateGif = false
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateGif'){
-                setbot.templateImage = false
-                setbot.templateVideo = false
-                setbot.templateGif = true
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateMessage'){
-                setbot.templateImage = false
-                setbot.templateVideo = false
-                setbot.templateGif = false
-                setbot.templateMsg = true
-                m.reply(mess.success)
-                } else {
-                let sections = [
-                {
-                title: "CHANGE MENU BOT",
-                rows: [
-                {title: "Template Image", rowId: `setmenu templateImage`, description: `Change menu bot to Template Image`},
-                {title: "Template Video", rowId: `setmenu templateVideo`, description: `Change menu bot to Template Video`},
-                {title: "Template Gif", rowId: `setmenu templateGif`, description: `Change menu bot to Template Gif`},
-                {title: "Template Message", rowId: `setmenu templateMessage`, description: `Change menu bot to Template Message`}
-                ]
-                },
-                ]
-                naze.sendListMsg(m.chat, `pilih aja *${pushname}* Setmenu nya!`, nyoutube, `*Hello Kak* !`, `Pilih Set Menu`, sections, m)
-                }
-            }
-            break**/
-            
-//PEMBATAS CONVERT=======================================
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
             if (!quoted) throw `*Balas Video/Image Dengan Caption* ${prefix + command}`
             m.reply(mess.wait)
@@ -3644,31 +3598,7 @@ rules = `╭──❍ *Rules BOT*
 │
 ╰────❍`
 let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'sponsor': {
-            if (!m.isGroup) throw mess.group
-            let qontak = `6285718971848@s.whatsapp.net`
-let dana = `6281911500445@s.whatsapp.net`
-let shopeeotp = `6285574670796@s.whatsapp.net`
-let shopee = `622150996855@s.whatsapp.net`
-let tokopedia = `6281197911081@s.whatsapp.net`
-let smartfrend = `628881212888@s.whatsapp.net`
-let getcontact = `447990653714@s.whatsapp.net`
-let facebook = `447710173736@s.whatsapp.net`
-let pasarpolis = `6287700178000@s.whatsapp.net`
-let kominfo = `628119224545@s.whatsapp.net`
-let alfamart = `628111500959@s.whatsapp.net`
-            let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let jawab = `*Bot by Naze Dev* 
--Creator :  @${ownernya.split('@')[0]}\n-Lu : @${me.split('@')[0]}\n-Powered  : @${ini_mark.split('@')[0]}\n- :  @${qontak.split('@')[0]}\n- :  @${dana.split('@')[0]}\n- :  @${shopeeotp.split('@')[0]}\n- :  @${shopee.split('@')[0]}\n- :  @${tokopedia.split('@')[0]}\n- :  @${smartfrend.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${facebook.split('@')[0]}\n- :  @${pasarpolis.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${kominfo.split('@')[0]}\n- :  @${alfamart.split('@')[0]}`
-            let ments = [ownernya, me, ini_mark, qontak, dana, shopeeotp, shopee, tokopedia, smartfrend, getcontact, facebook, pasarpolis, kominfo, alfamart]
-            let buttons = [
-                        { buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 }
-                    ]
-                    await naze.sendButtonText(m.chat, buttons, jawab, naze.user.name, m, {mentions: ments})
+            await naze.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak}
             }
             break
             case 'menu': {
@@ -3678,8 +3608,8 @@ let alfamart = `628111500959@s.whatsapp.net`
 *INFO USER*
 *Nama* : ${pushname}
 *Number* : @${me.split('@')[0]}
-*Premium* : ${isPremium ? '✅' : `❌`}
-*Limit* : ${isPremium ? '♾Infinity' : `〽️${db.data.users[m.sender].limit}`}
+*Premium* : ${isPremium ? 'Yes' : `No`}
+*Limit* : ${isPremium ? 'Infinity' : `${db.data.users[m.sender].limit}`}
 
 *INFO BOT*
 *Nama Bot* : ${botname}
@@ -3718,7 +3648,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}cekvote
    • ${prefix}hapusvote
 
- *Webzone Menu*
+*Webzone Menu*
    • ${prefix}playstore
    • ${prefix}gsmarena
    • ${prefix}jadwalbioskop
@@ -3728,7 +3658,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}webtoons
    • ${prefix}drakor
 
- *Downloader Menu*
+*Downloader Menu*
    • ${prefix}tiktoknowm [url]
    • ${prefix}tiktokwm [url]
    • ${prefix}tiktokmp3 [url]
@@ -3745,7 +3675,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}joox [query]
    • ${prefix}soundcloud [url]
 
- *Search Menu*
+*Search Menu*
    • ${prefix}play [query]
    • ${prefix}yts [query]
    • ${prefix}google [query]
@@ -3757,7 +3687,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}ringtone [query]
    • ${prefix}stalk [option] [query]
 
- *Random Menu*
+*Random Menu*
    • ${prefix}gbtku
    • ${prefix}coffe
    • ${prefix}quotesanime
@@ -3770,7 +3700,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}anime
    • ${prefix}waifu
 
- *Text Pro Menu*
+*Text Pro Menu*
    • ${prefix}3dchristmas
    • ${prefix}3ddeepsea
    • ${prefix}americanflag
@@ -3803,7 +3733,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}blackpink
    • ${prefix}gluetext
 
- *Photo Oxy Menu*
+*Photo Oxy Menu*
    • ${prefix}shadow
    • ${prefix}romantic
    • ${prefix}smoke
@@ -3817,7 +3747,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}harrypotter
    • ${prefix}retrolol
 
- *Ephoto Menu*
+*Ephoto Menu*
    • ${prefix}ffcover
    • ${prefix}crossfire
    • ${prefix}galaxy
@@ -3828,7 +3758,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}igcertificate
    • ${prefix}ytcertificate
 
- *Fun Menu*
+*Fun Menu*
    • ${prefix}simih
    • ${prefix}halah
    • ${prefix}hilih
@@ -3848,7 +3778,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}math [mode]
    • ${prefix}suitpvp [@tag]
 
- *Primbon Menu*
+*Primbon Menu*
    • ${prefix}nomorhoki
    • ${prefix}artimimpi
    • ${prefix}artinama
@@ -3879,7 +3809,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}masasubur
    • ${prefix}zodiak
 
- *Convert Menu*
+*Convert Menu*
    • ${prefix}attp
    • ${prefix}ttp
    • ${prefix}toimage
@@ -3898,7 +3828,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}styletext
    • ${prefix}smeme
 
- *Main Menu*
+*Main Menu*
    • ${prefix}ping
    • ${prefix}owner
    • ${prefix}report
@@ -3913,7 +3843,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}tinyurl [url]
    • ${prefix}shrturl [url]
 
- *Database Menu*
+*Database Menu*
    • ${prefix}setcmd
    • ${prefix}listcmd
    • ${prefix}delcmd
@@ -3923,20 +3853,20 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}getmsg
    • ${prefix}delmsg
 
- *Anonymous Menu*
+*Anonymous Menu*
    • ${prefix}anonymous
    • ${prefix}start
    • ${prefix}next
    • ${prefix}keluar
 
- *Islamic Menu*
+*Islamic Menu*
    • ${prefix}iqra
    • ${prefix}hadist
    • ${prefix}alquran
    • ${prefix}juzamma
    • ${prefix}tafsirsurah
 
- *Voice Changer*
+*Voice Changer*
    • ${prefix}bass
    • ${prefix}blown
    • ${prefix}deep
@@ -3949,7 +3879,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}slow
    • ${prefix}tupai
 
- *Owner Menu*
+*Owner Menu*
    • ${prefix}react [emoji]
    • ${prefix}chat [option]
    • ${prefix}join [link]
@@ -3960,9 +3890,171 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}bcall [text]
    • ${prefix}setppbot [image]
    • ${prefix}setexif
-   • ${prefix}setmenu [option]`
+   
+*Sound*
+   • ${prefix}sound1
+   • ${prefix}sound2
+   • ${prefix}sound3
+   • ${prefix}sound4
+   • ${prefix}sound5
+   • ${prefix}sound6
+   • ${prefix}sound7
+   • ${prefix}sound8
+   • ${prefix}sound9
+   • ${prefix}sound10
+   • ${prefix}sound11
+   • ${prefix}sound12
+   • ${prefix}sound13
+   • ${prefix}sound14
+   • ${prefix}sound15
+   • ${prefix}sound16
+   • ${prefix}sound17
+   • ${prefix}sound18
+   • ${prefix}sound19
+   • ${prefix}sound20
+   • ${prefix}sound21
+   • ${prefix}sound22
+   • ${prefix}sound23
+   • ${prefix}sound24
+   • ${prefix}sound25
+   • ${prefix}sound26
+   • ${prefix}sound27
+   • ${prefix}sound28
+   • ${prefix}sound29
+   • ${prefix}sound30
+   • ${prefix}sound31
+   • ${prefix}sound32
+   • ${prefix}sound33
+   • ${prefix}sound34
+   • ${prefix}sound35
+   • ${prefix}sound36
+   • ${prefix}sound37
+   • ${prefix}sound38
+   • ${prefix}sound39
+   • ${prefix}sound40
+   • ${prefix}sound41
+   • ${prefix}sound42
+   • ${prefix}sound43
+   • ${prefix}sound44
+   • ${prefix}sound45
+   • ${prefix}sound46
+   • ${prefix}sound47
+   • ${prefix}sound48
+   • ${prefix}sound49
+   • ${prefix}sound50
+   • ${prefix}sound51
+   • ${prefix}sound52
+   • ${prefix}sound53
+   • ${prefix}sound54
+   • ${prefix}sound55
+   • ${prefix}sound56
+   • ${prefix}sound57
+   • ${prefix}sound58
+   • ${prefix}sound59
+   • ${prefix}sound60
+   • ${prefix}sound61
+   • ${prefix}sound62
+   • ${prefix}sound63
+   • ${prefix}sound64
+   • ${prefix}sound65
+   • ${prefix}sound66
+   • ${prefix}sound67
+   • ${prefix}sound68
+   • ${prefix}sound69
+   • ${prefix}sound70
+   • ${prefix}sound71
+   • ${prefix}sound72
+   • ${prefix}sound73
+   • ${prefix}sound74
+   • ${prefix}sound75
+   • ${prefix}sound76
+   • ${prefix}sound77
+   • ${prefix}sound78
+   • ${prefix}sound79
+   • ${prefix}sound80
+   • ${prefix}sound81
+   • ${prefix}sound82
+   • ${prefix}sound83
+   • ${prefix}sound84
+   • ${prefix}sound85
+   • ${prefix}sound86
+   • ${prefix}sound87
+   • ${prefix}sound88
+   • ${prefix}sound89
+   • ${prefix}sound90
+   • ${prefix}sound91
+   • ${prefix}sound92
+   • ${prefix}sound93
+   • ${prefix}sound94
+   • ${prefix}sound95
+   • ${prefix}sound96
+   • ${prefix}sound97
+   • ${prefix}sound98
+   • ${prefix}sound99
+   • ${prefix}sound100
+   • ${prefix}sound101
+   • ${prefix}sound102
+   • ${prefix}sound103
+   • ${prefix}sound104
+   • ${prefix}sound105
+   • ${prefix}sound106
+   • ${prefix}sound107
+   • ${prefix}sound108
+   • ${prefix}sound109
+   • ${prefix}sound110
+   • ${prefix}sound111
+   • ${prefix}sound112
+   • ${prefix}sound113
+   • ${prefix}sound114
+   • ${prefix}sound115
+   • ${prefix}sound116
+   • ${prefix}sound117
+   • ${prefix}sound118
+   • ${prefix}sound119
+   • ${prefix}sound120
+   • ${prefix}sound121
+   • ${prefix}sound122
+   • ${prefix}sound123
+   • ${prefix}sound124
+   • ${prefix}sound125
+   • ${prefix}sound126
+   • ${prefix}sound127
+   • ${prefix}sound128
+   • ${prefix}sound129
+   • ${prefix}sound130
+   • ${prefix}sound131
+   • ${prefix}sound132
+   • ${prefix}sound133
+   • ${prefix}sound134
+   • ${prefix}sound135
+   • ${prefix}sound136
+   • ${prefix}sound137
+   • ${prefix}sound138
+   • ${prefix}sound139
+   • ${prefix}sound140
+   • ${prefix}sound141
+   • ${prefix}sound142
+   • ${prefix}sound143
+   • ${prefix}sound144
+   • ${prefix}sound145
+   • ${prefix}sound146
+   • ${prefix}sound147
+   • ${prefix}sound148
+   • ${prefix}sound149
+   • ${prefix}sound150
+   • ${prefix}sound151
+   • ${prefix}sound152
+   • ${prefix}sound153
+   • ${prefix}sound154
+   • ${prefix}sound155
+   • ${prefix}sound156
+   • ${prefix}sound157
+   • ${prefix}sound158
+   • ${prefix}sound159
+   • ${prefix}sound160
+   • ${prefix}sound161`
             let ments = [ownernya, me, ini_mark]
-            let buttons = [{ buttonId: 'list', buttonText: { displayText: '🎋↝Simple Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '🐣↝Rules ' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '👥↝Owner Bot' }, type: 1 }]
+            let buttons = [{ buttonId: 'patrick', buttonText: { displayText: '\naku gay dan aku bangga' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: 'Rules' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: 'Owner Bot' }, type: 1 }]
             let buttonMessage = {
   document: fs.readFileSync('./media/doc/fake.pptx'),
   fileName : `Halo Kak ${pushname}`,
@@ -3985,749 +4077,7 @@ let alfamart = `628111500959@s.whatsapp.net`
   }
   naze.sendMessage(m.chat, buttonMessage, {quoted: fakestatus})
   }
- break
-            case 'simplemenu': case 'list': case 'help': {
-            let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let ments = [ownernya, me, ini_mark]
-            let kukiw = `*Kak ${pushname}*`
-                let sections = [
-                {
-	           title: ' ∫ » Sewa Bot? –––––––·•',
-	           rows: [
-	            {title: "〽️ • Sewa", rowId: `donasi`, description: `KLIK UNTUK SEWA BOT`},
-                {title: "📴 • Owner", rowId: `owner`, description: `KLIK UNTUK BERTANYA KEPADA OWNER`}
-	            ]
-                },{
-                title: "⚠︎  ∫ » CHANGE MENU BOT « ✧",
-                rows: [
-                {title: "✦  「 Group 」", rowId: `mgroup`, description: `╰ ► 👥Fitur Buat Grup, Tapi Hati Hati Admin :v`},
-                {title: "✦  「 Webzone 」", rowId: `mwebzone`, description: `╰ ► 📹Cari Film? Sini Tempatnya 🤫`},
-                {title: "✦  「 Downloader 」", rowId: `mdownloader`, description: `╰ ► 📥Buat Download Apaan? 🤨`},
-                {title: "✦  「 Search 」", rowId: `msearch`, description: `╰ ► 🔍Cari Apa Hayo`},
-                {title: "✦  「 Random 」", rowId: `mrandom`, description: `╰ ► ❔Random Moment🗿`},
-                {title: "✦  「 Text Pro 」", rowId: `mtextpro`, description: `╰ ► ❇Teksnya Keren Kan?`},
-                {title: "✦  「 Photo Oxy 」", rowId: `mphotooxy`, description: `╰ ► ♻️Gabut Amat`},
-                {title: "✦  「 Ephoto 」", rowId: `mephoto`, description: `╰ ► 🗳Buat Edit Apaan?`},
-                {title: "✦  「 Fun 」", rowId: `mfun`, description: `╰ ► 🔫Buat Fun² Bro`},
-                {title: "✦  「 Primbon 」", rowId: `mprimbon`, description: `╰ ► 😂Ngakak`},
-                {title: "✦  「 Convert 」", rowId: `mconvert`, description: `╰ ► 🛠Mau Buat Apa?`},
-                {title: "✦  「 Main 」", rowId: `mmain`, description: `╰ ► 💾Senjata Admin & Owner`},
-                {title: "✦  「 Database 」", rowId: `mdatabase`, description: `╰ ► 📁Engak Ada Apa² Disini`},
-                {title: "✦  「 Anonymous 」", rowId: `manonymous`, description: `╰ ► 🎭Fitur Rahasia Jangan Dipake !`},
-                {title: "✦  「 Islamic 」", rowId: `mislamic`, description: `╰ ► 🕌Masyaallah Brother`},
-                {title: "✦  「 Voice 」", rowId: `mvoice`, description: `╰ ► 🎶Req Lagu Apa Ngab?`},
-                {title: "✦  「 Owner 」", rowId: `mowner`, description: `╰ ► 🎟Jangan Ganggu Ownerku😡`}
-                ]
-                },{
-	           title: ' ∫ » SUPPORT ME –––––––·•',
-	           rows: [
-	            {title: "🎟 • Donasi", rowId: `donasi`, description: `╰ ► 💰 Donasi ♕︎`},
-                {title: "🔴 • Subscribe", rowId: `subsyt`, description: `╰ ► 📢 Thanks For Subscribe ♕︎`},
-                {title: "📚 • Github", rowId: `sc`, description: `╰ ► 🎷 Follow My Github ♕︎`}
-	]
-  },
-]
-                naze.sendListMsg(m.chat, kukiw, nyoutube, `*${ucapanWaktu}*`, `Touch Me (⁠≧⁠▽⁠≦⁠)`, sections, fkontak)
-            }
-            break
-            case 'mgroup': {
-goup = `╭──❍ *Group Menu*
-│
-│⭔ ${prefix}linkgroup
-│⭔ ${prefix}ephemeral [option]
-│⭔ ${prefix}setppgc [image]
-│⭔ ${prefix}setname [text]
-│⭔ ${prefix}setdesc [text]
-│⭔ ${prefix}group [option]
-│⭔ ${prefix}editinfo [option]
-│⭔ ${prefix}add @user
-│⭔ ${prefix}kick @user
-│⭔ ${prefix}hidetag [text]
-│⭔ ${prefix}tagall [text]
-│⭔ ${prefix}antilink [on/off]
-│⭔ ${prefix}mute [on/off]
-│⭔ ${prefix}promote @user
-│⭔ ${prefix}demote @user
-│⭔ ${prefix}vote [text]
-│⭔ ${prefix}devote
-│⭔ ${prefix}upvote
-│⭔ ${prefix}cekvote
-│⭔ ${prefix}hapusvote
-│
-╰─────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, goup, nyoutube, m, {quoted: fkontak})
-            }
-            break
-      case 'mwebzone': {
-wbzone = `╭──❍ *Webzone Menu*
-│
-│⭔ ${prefix}playstore
-│⭔ ${prefix}gsmarena
-│⭔ ${prefix}jadwalbioskop
-│⭔ ${prefix}nowplayingbioskop
-│⭔ ${prefix}aminio
-│⭔ ${prefix}wattpad
-│⭔ ${prefix}webtoons
-│⭔ ${prefix}drakor
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, wbzone, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mdownloader': {
-dwnloader = `╭──❍ *Downloader Menu*
-│
-│⭔ ${prefix}tiktoknowm [url]
-│⭔ ${prefix}tiktokwm [url]
-│⭔ ${prefix}tiktokmp3 [url]
-│⭔ ${prefix}instagram [url]
-│⭔ ${prefix}twitter [url]
-│⭔ ${prefix}twittermp3 [url]
-│⭔ ${prefix}facebook [url]
-│⭔ ${prefix}pinterestdl [url]
-│⭔ ${prefix}ytmp3 [url]
-│⭔ ${prefix}ytmp4 [url]
-│⭔ ${prefix}getmusic [query]
-│⭔ ${prefix}getvideo [query]
-│⭔ ${prefix}umma [url]
-│⭔ ${prefix}joox [query]
-│⭔ ${prefix}soundcloud [url]
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, dwnloader, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'msearch': {
-sarch = `╭──❍ *Search Menu*
-│
-│⭔ ${prefix}play [query]
-│⭔ ${prefix}yts [query]
-│⭔ ${prefix}google [query]
-│⭔ ${prefix}gimage [query]
-│⭔ ${prefix}pinterest [query]
-│⭔ ${prefix}wallpaper [query]
-│⭔ ${prefix}wikimedia [query]
-│⭔ ${prefix}ytsearch [query]
-│⭔ ${prefix}ringtone [query]
-│⭔ ${prefix}stalk [option] [query]
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, sarch, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mrandom': {
-rndom = `╭──❍ *Random Menu*
-│
-│⭔ ${prefix}gbtku
-│⭔ ${prefix}coffe
-│⭔ ${prefix}quotesanime
-│⭔ ${prefix}motivasi
-│⭔ ${prefix}dilanquote
-│⭔ ${prefix}bucinquote
-│⭔ ${prefix}katasenja
-│⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, rndom, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mtextpro': {
-txtpro = `╭──❍ *Text Pro Menu*
-│
-│⭔ ${prefix}3dchristmas
-│⭔ ${prefix}3ddeepsea
-│⭔ ${prefix}americanflag
-│⭔ ${prefix}3dscifi
-│⭔ ${prefix}3drainbow
-│⭔ ${prefix}3dwaterpipe
-│⭔ ${prefix}halloweenskeleton
-│⭔ ${prefix}sketch
-│⭔ ${prefix}bluecircuit
-│⭔ ${prefix}space
-│⭔ ${prefix}metallic
-│⭔ ${prefix}fiction
-│⭔ ${prefix}greenhorror
-│⭔ ${prefix}transformer
-│⭔ ${prefix}berry
-│⭔ ${prefix}thunder
-│⭔ ${prefix}magma
-│⭔ ${prefix}3dcrackedstone
-│⭔ ${prefix}3dneonlight
-│⭔ ${prefix}impressiveglitch
-│⭔ ${prefix}naturalleaves
-│⭔ ${prefix}fireworksparkle
-│⭔ ${prefix}matrix
-│⭔ ${prefix}dropwater
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}foggywindow
-│⭔ ${prefix}neondevils
-│⭔ ${prefix}christmasholiday
-│⭔ ${prefix}3dgradient
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}gluetext
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, txtpro, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mphotooxy': {
-potooxy = `╭──❍ *Photo Oxy Menu*
-│
-│⭔ ${prefix}shadow
-│⭔ ${prefix}romantic
-│⭔ ${prefix}smoke
-│⭔ ${prefix}burnpapper
-│⭔ ${prefix}naruto
-│⭔ ${prefix}lovemsg
-│⭔ ${prefix}grassmsg
-│⭔ ${prefix}lovetext
-│⭔ ${prefix}coffecup
-│⭔ ${prefix}butterfly
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}retrolol
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, potooxy, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mephoto': {
-ehoto = `╭──❍ *Ephoto Menu*
-│
-│⭔ ${prefix}ffcover
-│⭔ ${prefix}crossfire
-│⭔ ${prefix}galaxy
-│⭔ ${prefix}glass
-│⭔ ${prefix}neon
-│⭔ ${prefix}beach
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}igcertificate
-│⭔ ${prefix}ytcertificate
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, ehoto, nyoutube, m, {quoted: fkontak})
-            }
-            break
-           case 'mfun': {
-mun = `╭──❍ *Fun Menu*
-│
-│⭔ ${prefix}simih
-│⭔ ${prefix}halah
-│⭔ ${prefix}hilih
-│⭔ ${prefix}huluh
-│⭔ ${prefix}heleh
-│⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
-│⭔ ${prefix}apakah
-│⭔ ${prefix}bisakah
-│⭔ ${prefix}kapan
-│⭔ ${prefix}slot
-│⭔ ${prefix}delttt
-│⭔ ${prefix}tictactoe
-│⭔ ${prefix}family100
-│⭔ ${prefix}tebak [option]
-│⭔ ${prefix}math [mode]
-│⭔ ${prefix}suitpvp [@tag]
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, mun, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mprimbon': {
-pimbon = `╭──❍ *Primbon Menu*
-│
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, pimbon, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mconvert': {
-cnvert = `╭──❍ *Convert Menu*
-│
-│⭔ ${prefix}attp
-│⭔ ${prefix}ttp
-│⭔ ${prefix}toimage
-│⭔ ${prefix}removebg
-│⭔ ${prefix}sticker
-│⭔ ${prefix}emojimix
-│⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
-│⭔ ${prefix}togif
-│⭔ ${prefix}tourl
-│⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
-│⭔ ${prefix}ebinary
-│⭔ ${prefix}dbinary
-│⭔ ${prefix}styletext
-│⭔ ${prefix}smeme
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, cnvert, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mmain': {
-min = `╭──❍ *Main Menu*
-│
-│⭔ ${prefix}ping
-│⭔ ${prefix}owner
-│⭔ ${prefix}report
-│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
-│⭔ ${prefix}delete
-│⭔ ${prefix}infochat
-│⭔ ${prefix}quoted
-│⭔ ${prefix}listpc
-│⭔ ${prefix}listgc
-│⭔ ${prefix}listonline
-│⭔ ${prefix}speedtest
-│⭔ ${prefix}menfes
-│⭔ ${prefix}tinyurl [link]
-│⭔ ${prefix}shrturl [link]
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, min, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mdatabase': {
-dtbase = `╭──❍ *Database Menu*
-│
-│⭔ ${prefix}setcmd
-│⭔ ${prefix}listcmd
-│⭔ ${prefix}delcmd
-│⭔ ${prefix}lockcmd
-│⭔ ${prefix}addmsg
-│⭔ ${prefix}listmsg
-│⭔ ${prefix}getmsg
-│⭔ ${prefix}delmsg
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, dtbase, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'manonymous': {
-aonymous = `╭──❍ *Anonymous Menu*
-│
-│⭔ ${prefix}anonymous
-│⭔ ${prefix}start
-│⭔ ${prefix}next
-│⭔ ${prefix}keluar
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, aonymous, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mislamic': {
-islmic = `╭──❍ *Islamic Menu*
-│
-│⭔ ${prefix}iqra
-│⭔ ${prefix}hadist
-│⭔ ${prefix}alquran
-│⭔ ${prefix}juzamma
-│⭔ ${prefix}tafsirsurah
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, islmic, nyoutube, m, {quoted: fkontak})
-            }
-            break
-case 'mvoice': {
-vice = `╭──❍ *Voice Changer*
-│
-│⭔ ${prefix}bass
-│⭔ ${prefix}blown
-│⭔ ${prefix}deep
-│⭔ ${prefix}earrape
-│⭔ ${prefix}fast
-│⭔ ${prefix}fat
-│⭔ ${prefix}nightcore
-│⭔ ${prefix}reverse
-│⭔ ${prefix}robot
-│⭔ ${prefix}slow
-│⭔ ${prefix}tupai
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, vice, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'mowner': {
-oner = `╭──❍ *Owner Menu*
-│
-│⭔ ${prefix}react [emoji]
-│⭔ ${prefix}chat [option]
-│⭔ ${prefix}join [link]
-│⭔ ${prefix}leave
-│⭔ ${prefix}block @user
-│⭔ ${prefix}unblock @user
-│⭔ ${prefix}bcgroup [text]
-│⭔ ${prefix}bcall [text]
-│⭔ ${prefix}setppbot [image]
-│⭔ ${prefix}setexif
-│⭔ ${prefix}setmenu [option]
-│
-╰────❍`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, oner, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'allmenu': {
-            let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let ments = [ownernya, me, ini_mark]
-                anu = ` ∫ » *${ucapanWaktu}* « ✧\n⚠︎ *kak @${me.split('@')[0]}*\n♕︎ *Powered : @${ini_mark.split('@')[0]}*\n ∫ » *Creator : @${ownernya.split('@')[0]}*
-╭──❍ *Group Menu*
-│
-│⭔ ${prefix}linkgroup
-│⭔ ${prefix}ephemeral [option]
-│⭔ ${prefix}setppgc [image]
-│⭔ ${prefix}setname [text]
-│⭔ ${prefix}setdesc [text]
-│⭔ ${prefix}group [option]
-│⭔ ${prefix}editinfo [option]
-│⭔ ${prefix}add @user
-│⭔ ${prefix}kick @user
-│⭔ ${prefix}hidetag [text]
-│⭔ ${prefix}tagall [text]
-│⭔ ${prefix}antilink [on/off]
-│⭔ ${prefix}mute [on/off]
-│⭔ ${prefix}promote @user
-│⭔ ${prefix}demote @user
-│⭔ ${prefix}vote [text]
-│⭔ ${prefix}devote
-│⭔ ${prefix}upvote
-│⭔ ${prefix}cekvote
-│⭔ ${prefix}hapusvote
-│
-╰────❍
-╭──❍ *Webzone Menu*
-│
-│⭔ ${prefix}playstore
-│⭔ ${prefix}gsmarena
-│⭔ ${prefix}jadwalbioskop
-│⭔ ${prefix}nowplayingbioskop
-│⭔ ${prefix}aminio
-│⭔ ${prefix}wattpad
-│⭔ ${prefix}webtoons
-│⭔ ${prefix}drakor
-│
-╰────❍
-╭──❍ *Downloader Menu*
-│
-│⭔ ${prefix}tiktoknowm [url]
-│⭔ ${prefix}tiktokwm [url]
-│⭔ ${prefix}tiktokmp3 [url]
-│⭔ ${prefix}instagram [url]
-│⭔ ${prefix}twitter [url]
-│⭔ ${prefix}twittermp3 [url]
-│⭔ ${prefix}facebook [url]
-│⭔ ${prefix}pinterestdl [url]
-│⭔ ${prefix}ytmp3 [url]
-│⭔ ${prefix}ytmp4 [url]
-│⭔ ${prefix}getmusic [query]
-│⭔ ${prefix}getvideo [query]
-│⭔ ${prefix}umma [url]
-│⭔ ${prefix}joox [query]
-│⭔ ${prefix}soundcloud [url]
-│
-╰────❍
-╭──❍ *Search Menu*
-│
-│⭔ ${prefix}play [query]
-│⭔ ${prefix}yts [query]
-│⭔ ${prefix}google [query]
-│⭔ ${prefix}gimage [query]
-│⭔ ${prefix}pinterest [query]
-│⭔ ${prefix}wallpaper [query]
-│⭔ ${prefix}wikimedia [query]
-│⭔ ${prefix}ytsearch [query]
-│⭔ ${prefix}ringtone [query]
-│⭔ ${prefix}stalk [option] [query]
-│
-╰────❍
-╭──❍ *Random Menu*
-│
-│⭔ ${prefix}gbtku
-│⭔ ${prefix}coffe
-│⭔ ${prefix}quotesanime
-│⭔ ${prefix}motivasi
-│⭔ ${prefix}dilanquote
-│⭔ ${prefix}bucinquote
-│⭔ ${prefix}katasenja
-│⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
-│
-╰────❍
-╭──❍ *Text Pro Menu*
-│
-│⭔ ${prefix}3dchristmas
-│⭔ ${prefix}3ddeepsea
-│⭔ ${prefix}americanflag
-│⭔ ${prefix}3dscifi
-│⭔ ${prefix}3drainbow
-│⭔ ${prefix}3dwaterpipe
-│⭔ ${prefix}halloweenskeleton
-│⭔ ${prefix}sketch
-│⭔ ${prefix}bluecircuit
-│⭔ ${prefix}space
-│⭔ ${prefix}metallic
-│⭔ ${prefix}fiction
-│⭔ ${prefix}greenhorror
-│⭔ ${prefix}transformer
-│⭔ ${prefix}berry
-│⭔ ${prefix}thunder
-│⭔ ${prefix}magma
-│⭔ ${prefix}3dcrackedstone
-│⭔ ${prefix}3dneonlight
-│⭔ ${prefix}impressiveglitch
-│⭔ ${prefix}naturalleaves
-│⭔ ${prefix}fireworksparkle
-│⭔ ${prefix}matrix
-│⭔ ${prefix}dropwater
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}foggywindow
-│⭔ ${prefix}neondevils
-│⭔ ${prefix}christmasholiday
-│⭔ ${prefix}3dgradient
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}gluetext
-│
-╰────❍
-╭──❍ *Photo Oxy Menu*
-│
-│⭔ ${prefix}shadow
-│⭔ ${prefix}romantic
-│⭔ ${prefix}smoke
-│⭔ ${prefix}burnpapper
-│⭔ ${prefix}naruto
-│⭔ ${prefix}lovemsg
-│⭔ ${prefix}grassmsg
-│⭔ ${prefix}lovetext
-│⭔ ${prefix}coffecup
-│⭔ ${prefix}butterfly
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}retrolol
-│
-╰────❍
-╭──❍ *Ephoto Menu*
-│
-│⭔ ${prefix}ffcover
-│⭔ ${prefix}crossfire
-│⭔ ${prefix}galaxy
-│⭔ ${prefix}glass
-│⭔ ${prefix}neon
-│⭔ ${prefix}beach
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}igcertificate
-│⭔ ${prefix}ytcertificate
-│
-╰────❍
-╭──❍ *Fun Menu*
-│
-│⭔ ${prefix}simih
-│⭔ ${prefix}halah
-│⭔ ${prefix}hilih
-│⭔ ${prefix}huluh
-│⭔ ${prefix}heleh
-│⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
-│⭔ ${prefix}apakah
-│⭔ ${prefix}bisakah
-│⭔ ${prefix}kapan
-│⭔ ${prefix}slot
-│⭔ ${prefix}delttt
-│⭔ ${prefix}tictactoe
-│⭔ ${prefix}family100
-│⭔ ${prefix}tebak [option]
-│⭔ ${prefix}math [mode]
-│⭔ ${prefix}suitpvp [@tag]
-│
-╰────❍
-╭──❍ *Primbon Menu*
-│
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
-│
-╰────❍
-╭──❍ *Convert Menu*
-│
-│⭔ ${prefix}attp
-│⭔ ${prefix}ttp
-│⭔ ${prefix}toimage
-│⭔ ${prefix}removebg
-│⭔ ${prefix}sticker
-│⭔ ${prefix}emojimix
-│⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
-│⭔ ${prefix}togif
-│⭔ ${prefix}tourl
-│⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
-│⭔ ${prefix}ebinary
-│⭔ ${prefix}dbinary
-│⭔ ${prefix}styletext
-│⭔ ${prefix}smeme
-│
-╰────❍
-╭──❍ *Main Menu*
-│
-│⭔ ${prefix}ping
-│⭔ ${prefix}owner
-│⭔ ${prefix}report
-│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
-│⭔ ${prefix}delete
-│⭔ ${prefix}infochat
-│⭔ ${prefix}quoted
-│⭔ ${prefix}listpc
-│⭔ ${prefix}listgc
-│⭔ ${prefix}listonline
-│⭔ ${prefix}speedtest
-│⭔ ${prefix}menfes 
-│⭔ ${prefix}tinyurl [url]
-│⭔ ${prefix}shrturl [url]
-│
-╰────❍
-╭──❍ *Database Menu*
-│
-│⭔ ${prefix}setcmd
-│⭔ ${prefix}listcmd
-│⭔ ${prefix}delcmd
-│⭔ ${prefix}lockcmd
-│⭔ ${prefix}addmsg
-│⭔ ${prefix}listmsg
-│⭔ ${prefix}getmsg
-│⭔ ${prefix}delmsg
-│
-╰────❍
-╭──❍ *Anonymous Menu*
-│
-│⭔ ${prefix}anonymous
-│⭔ ${prefix}start
-│⭔ ${prefix}next
-│⭔ ${prefix}keluar
-│
-╰────❍
-╭──❍ *Islamic Menu*
-│
-│⭔ ${prefix}iqra
-│⭔ ${prefix}hadist
-│⭔ ${prefix}alquran
-│⭔ ${prefix}juzamma
-│⭔ ${prefix}tafsirsurah
-│
-╰────❍
-╭──❍ *Voice Changer*
-│
-│⭔ ${prefix}bass
-│⭔ ${prefix}blown
-│⭔ ${prefix}deep
-│⭔ ${prefix}earrape
-│⭔ ${prefix}fast
-│⭔ ${prefix}fat
-│⭔ ${prefix}nightcore
-│⭔ ${prefix}reverse
-│⭔ ${prefix}robot
-│⭔ ${prefix}slow
-│⭔ ${prefix}tupai
-│
-╰────❍
-╭──❍ *Owner Menu*
-│
-│⭔ ${prefix}react [emoji]
-│⭔ ${prefix}chat [option]
-│⭔ ${prefix}join [link]
-│⭔ ${prefix}leave
-│⭔ ${prefix}block @user
-│⭔ ${prefix}unblock @user
-│⭔ ${prefix}bcgroup [text]
-│⭔ ${prefix}bcall [text]
-│⭔ ${prefix}setppbot [image]
-│⭔ ${prefix}setexif
-│⭔ ${prefix}setmenu [option]
-│
-╰────❍
-_Donasi Ngab_\n_Jangan Ngarep Free Mulu_`
-                let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-            naze.sendMessage(m.chat, { caption: `${anu}`, location: { jpegThumbnail: await reSize(faall, 300, 200)}, buttons: buttons, footer: nyoutube, mentions: ments})
-            }
-            break
+  break
 case 'sound1':
 case 'sound2':
 case 'sound3':
