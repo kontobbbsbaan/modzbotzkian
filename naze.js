@@ -862,8 +862,6 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 naze.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id})
 }
 break
-            
-//Pembatas FUN===============================================
             case 'slot': {
             const somtoy = sotoy[Math.floor(Math.random() * sotoy.length)]
             let sloth =`[  🎰VIRTUAL SLOT 🎰  ]\n------------------------\n\n🍒 : 🍌 : 🍇\n${somtoy}<=====\n🍇 : 🍌 : 🍒\n\n------------------------\n[  🎰 VIRTUAL SLOT 🎰  ]\n\n*Keterangan* :\n_Jika Mendapatkan 3Buah Sama_\n_Berarti Kamu Win_\n\n_Contoh : 🍒 : 🍒 : 🍒_ <=====`
@@ -1000,8 +998,6 @@ var ftelo = {key: {fromMe: false, participant: `${mentioned}`, ...(m.chat ? { re
 naze.sendMessage(m.chat, {text: bot}, {quoted: ftelo})
 }
 break
-           
-//PEMBATAS ADMIN & OWNER=======================================
             case 'totalfitur': case 'totalfiture': case 'fiture': case 'fitur': {
             	m.reply('*Total Ada 300 Fitur*\n_Ketik Req Untuk Request Fitur_')
             }
@@ -1024,11 +1020,10 @@ break
   fileLength: jumhal,
   pageCount: jumlha,
   caption: jawab,
-  footer: nyoutube,
   buttons: buttons,
   headerType: 4,
   contextInfo:{externalAdReply:{
-  title: 'Naze Dev',
+  title: 'MODZ BOTZ',
   body: 'Subscribe My YouTube', 
   showAdAttribution: true,
   thumbnail: thumb,
@@ -1997,51 +1992,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 naze.sendContact(m.chat, global.owner, m)
             }
             break
-            /**case 'setmenu': {
-            if (!isCreator) throw mess.owner
-            let setbot = db.data.settings[botNumber]
-               if (args[0] === 'templateImage'){
-                setbot.templateImage = true
-                setbot.templateVideo = false
-                setbot.templateGif = false
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateVideo'){
-                setbot.templateImage = false
-                setbot.templateVideo = true
-                setbot.templateGif = false
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateGif'){
-                setbot.templateImage = false
-                setbot.templateVideo = false
-                setbot.templateGif = true
-                setbot.templateMsg = false
-                m.reply(mess.success)
-                } else if (args[0] === 'templateMessage'){
-                setbot.templateImage = false
-                setbot.templateVideo = false
-                setbot.templateGif = false
-                setbot.templateMsg = true
-                m.reply(mess.success)
-                } else {
-                let sections = [
-                {
-                title: "CHANGE MENU BOT",
-                rows: [
-                {title: "Template Image", rowId: `setmenu templateImage`, description: `Change menu bot to Template Image`},
-                {title: "Template Video", rowId: `setmenu templateVideo`, description: `Change menu bot to Template Video`},
-                {title: "Template Gif", rowId: `setmenu templateGif`, description: `Change menu bot to Template Gif`},
-                {title: "Template Message", rowId: `setmenu templateMessage`, description: `Change menu bot to Template Message`}
-                ]
-                },
-                ]
-                naze.sendListMsg(m.chat, `pilih aja *${pushname}* Setmenu nya!`, nyoutube, `*Hello Kak* !`, `Pilih Set Menu`, sections, m)
-                }
-            }
-            break**/
-            
-//PEMBATAS CONVERT=======================================
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
             if (!quoted) throw `*Balas Video/Image Dengan Caption* ${prefix + command}`
             m.reply(mess.wait)
@@ -2698,8 +2648,6 @@ break
                 naze.sendMessage(m.chat, { text: poi.shorturl + `\nNih Bro`}, { quoted: fdoc })
             }
             break
-            
-//Pembatas Maker========================================
             case 'carbon': {
             	if (!text) throw 'No Query Text'
                m.reply(mess.wait)
@@ -2808,8 +2756,6 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
              naze.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname},For my Darling ` }, { quoted: m })
              }
              break
-            
-//Pembatas Primbon========================================
 case 'patrick': case 'patricksticker': case 'petrik': {
 var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
 var wifegerak = ano.split('\n')
@@ -3152,8 +3098,6 @@ break
                 naze.sendText(m.chat, `⭔ *Zodiak :* ${anu.message.zodiak}\n⭔ *Nomor :* ${anu.message.nomor_keberuntungan}\n⭔ *Aroma :* ${anu.message.aroma_keberuntungan}\n⭔ *Planet :* ${anu.message.planet_yang_mengitari}\n⭔ *Bunga :* ${anu.message.bunga_keberuntungan}\n⭔ *Warna :* ${anu.message.warna_keberuntungan}\n⭔ *Batu :* ${anu.message.batu_keberuntungan}\n⭔ *Elemen :* ${anu.message.elemen_keberuntungan}\n⭔ *Pasangan Zodiak :* ${anu.message.pasangan_zodiak}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
-            
-//PEMBATAS Downloads=======================================
 	    case 'stalker': case 'stalk': {
 		if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply('Limit Harian Anda Telah Habis')
                 if (!text) return m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
@@ -3416,26 +3360,6 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 		naze.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
 		}
 		break
-		/**case 'juzamma': {  ERROR BRO, FIX AJA KALO MAU
-		if (args[0] === 'pdf') {
-		m.reply(mess.wait)
-		naze.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
-		} else if (args[0] === 'docx') {
-		m.reply(mess.wait)
-		naze.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
-		} else if (args[0] === 'pptx') {
-		m.reply(mess.wait)
-		naze.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
-		} else if (args[0] === 'xlsx') {
-		m.reply(mess.wait)
-		naze.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
-		} else {
-		m.reply(`Mau format apa ? Example : ${prefix + command} pdf
-
-Format yang tersedia : pdf, docx, pptx, xlsx`)
-		}
-		}
-		break**/
 		case 'hadis': case 'hadist': {
 		if (!args[0]) throw `Contoh:
 ${prefix + command} bukhari 1
@@ -3634,42 +3558,6 @@ let capt = `⭔ Title: ${judul}
             capt += `⭔ Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, res.result[0].thumbnail, capt, m)
-            }
-            break
-
-//PEMBATAS Menu=======================================
-            case 'rules': {
-rules = `╭──❍ *Rules BOT*
-│
-│ *Intinya Jangan Spam❗*
-│
-╰────❍`
-let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
-            }
-            break
-            case 'sponsor': {
-            if (!m.isGroup) throw mess.group
-            let qontak = `6285718971848@s.whatsapp.net`
-let dana = `6281911500445@s.whatsapp.net`
-let shopeeotp = `6285574670796@s.whatsapp.net`
-let shopee = `622150996855@s.whatsapp.net`
-let tokopedia = `6281197911081@s.whatsapp.net`
-let smartfrend = `628881212888@s.whatsapp.net`
-let getcontact = `447990653714@s.whatsapp.net`
-let facebook = `447710173736@s.whatsapp.net`
-let pasarpolis = `6287700178000@s.whatsapp.net`
-let kominfo = `628119224545@s.whatsapp.net`
-let alfamart = `628111500959@s.whatsapp.net`
-            let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let jawab = `*Bot by Naze Dev* 
--Creator :  @${ownernya.split('@')[0]}\n-Lu : @${me.split('@')[0]}\n-Powered  : @${ini_mark.split('@')[0]}\n- :  @${qontak.split('@')[0]}\n- :  @${dana.split('@')[0]}\n- :  @${shopeeotp.split('@')[0]}\n- :  @${shopee.split('@')[0]}\n- :  @${tokopedia.split('@')[0]}\n- :  @${smartfrend.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${facebook.split('@')[0]}\n- :  @${pasarpolis.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${kominfo.split('@')[0]}\n- :  @${alfamart.split('@')[0]}`
-            let ments = [ownernya, me, ini_mark, qontak, dana, shopeeotp, shopee, tokopedia, smartfrend, getcontact, facebook, pasarpolis, kominfo, alfamart]
-            let buttons = [
-                        { buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 }
-                    ]
-                    await naze.sendButtonText(m.chat, buttons, jawab, naze.user.name, m, {mentions: ments})
             }
             break
             case 'menu': {
@@ -3962,7 +3850,7 @@ let alfamart = `628111500959@s.whatsapp.net`
    • ${prefix}setppbot [image]
    • ${prefix}setexif`
             let ments = [ownernya, me, ini_mark]
-            let buttons = [{ buttonId: 'p', buttonText: { displayText: 'Yt' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: 'Rules' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: 'Owner Bot' }, type: 1 }]
+            let buttons = [{ buttonId: 'p', buttonText: { displayText: 'Sewa Bot' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: 'Rules Bot' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: 'Owner Bot' }, type: 1 }]
             let buttonMessage = {
   document: fs.readFileSync('./media/doc/fake.pptx'),
   fileName : `Halo Kak ${pushname}`,
