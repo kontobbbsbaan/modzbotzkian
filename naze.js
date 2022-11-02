@@ -3560,10 +3560,10 @@ let capt = `⭔ Title: ${judul}
             naze.sendImage(m.chat, res.result[0].thumbnail, capt, m)
             }
             break
-            case 'h': {
+            case 'h': case 'ohidetag': {
                 if (!isCreator) return
             if (!m.isGroup) throw mess.group
-            naze.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}
+            naze.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
             }
             break
             case 'menu': {
