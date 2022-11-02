@@ -244,7 +244,7 @@ async function startNaze() {
         return status
     }
 	
-    naze.public = false
+    naze.public = true
 
     naze.serializeM = (m) => smsg(naze, m, store)
 
