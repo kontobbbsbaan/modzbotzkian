@@ -1016,7 +1016,7 @@ break
             break		 
             case 'subsyt': {
             let jawab = `*${ucapanWaktu}*\n*Silahkan Klik Link Ini*`
-            let buttonMessage = {
+            let Message = {
   document: fs.readFileSync('./media/doc/fake.pptx'),
   fileName : akulaku + (` | Halo ${pushname}`),
   mimetype: `${filsk}`,
@@ -1036,7 +1036,7 @@ break
   sourceUrl: myyt
   }}
   }
-  naze.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  naze.sendMessage(m.chat, Message, {quoted: fkontak})
             	}
             break
             case 'ceklimit': case 'checklimit': case 'limit':{
